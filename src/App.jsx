@@ -4,11 +4,28 @@ import "./App.css";
 
 const App = () => {
   const words = [
-    { word: "REACT", hint: "A JavaScript library for UI" },
-    { word: "VITE", hint: "A modern build tool" },
-    { word: "JAVASCRIPT", hint: "Language of the web" },
-    { word: "CODING", hint: "What developers love" },
+    { word: "apple", hint: "A sweet red or green fruit." },
+    { word: "banana", hint: "A long yellow fruit." },
+    { word: "elephant", hint: "The largest land animal." },
+    { word: "ocean", hint: "A large body of saltwater." },
+    { word: "guitar", hint: "A musical instrument with strings." },
+    { word: "sunflower", hint: "A tall plant with a large yellow flower." },
+    { word: "python", hint: "A popular programming language or a snake." },
+    { word: "chocolate", hint: "A sweet made from cacao beans." },
+    { word: "telescope", hint: "An instrument used to observe distant objects." },
+    { word: "pyramid", hint: "An ancient Egyptian structure." },
+    { word: "calendar", hint: "Used to track dates and months." },
+    { word: "umbrella", hint: "Used to protect against rain or sun." },
+    { word: "computer", hint: "An electronic machine for processing data." },
+    { word: "butterfly", hint: "An insect with colorful wings." },
+    { word: "diamond", hint: "A precious shiny gemstone." },
+    { word: "volcano", hint: "A mountain that can erupt with lava." },
+    { word: "piano", hint: "A large musical instrument with keys." },
+    { word: "planet", hint: "A celestial body that orbits the sun." },
+    { word: "library", hint: "A place full of books for reading." },
+    { word: "rainbow", hint: "It appears after rain with multiple colors." }
   ];
+  
 
   const [difficulty, setDifficulty] = useState("Medium");
   const [timeLeft, setTimeLeft] = useState(30);
@@ -78,7 +95,7 @@ const App = () => {
   return (
     <div className="app">
       <h1>Word Guessing Game</h1>
-      <p>Difficulty: {difficulty}</p>
+      {/* <p>Difficulty: {difficulty}</p> */}
       <p>Score: {score}</p>
       <p>Time Left: {timeLeft}s</p>
       <WordGuess
@@ -89,11 +106,11 @@ const App = () => {
         onGuess={handleGuess}
         onReset={resetGame}
       />
-      <div className="difficulty">
+      {/* <div className="difficulty">
         <button onClick={() => setDifficulty("Easy")}>Easy</button>
         <button onClick={() => setDifficulty("Medium")}>Medium</button>
         <button onClick={() => setDifficulty("Hard")}>Hard</button>
-      </div>
+      </div> */}
     </div>
   );
 };
